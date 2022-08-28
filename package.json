@@ -11,11 +11,17 @@
   "dependencies": {
     "@emotion/react": "^11.10.0",
     "@emotion/styled": "^11.10.0",
+    "@mui/icons-material": "^5.10.2",
     "@mui/material": "^5.10.2",
+    "@react-spring/web": "^9.5.2",
+    "@visx/gradient": "^2.10.0",
     "@visx/group": "^2.10.0",
+    "@visx/legend": "^2.10.0",
     "@visx/mock-data": "^2.1.2",
     "@visx/scale": "^2.2.2",
     "@visx/shape": "^2.12.2",
+    "@visx/text": "^2.12.2",
+    "axios": "^0.27.2",
     "next": "12.2.5",
     "react": "18.2.0",
     "react-dom": "18.2.0"
