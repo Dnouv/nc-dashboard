@@ -1,0 +1,290 @@
+[
+        {
+            "data": {
+                "24 Hours Volume": 964728205.6398035,
+                "7 Days Volume": 8452673365.716572,
+                "Project": "Uniswap",
+                "Rank": 1
+            },
+            "__typename": "get_result_template"
+        },
+        {
+            "data": {
+                "24 Hours Volume": 69882860.33701369,
+                "7 Days Volume": 1478854733.8063722,
+                "Project": "Curve",
+                "Rank": 2
+            },
+            "__typename": "get_result_template"
+        },
+        {
+            "data": {
+                "24 Hours Volume": 77458675.36193192,
+                "7 Days Volume": 746824698.0135831,
+                "Project": "DODO",
+                "Rank": 3
+            },
+            "__typename": "get_result_template"
+        },
+        {
+            "data": {
+                "24 Hours Volume": 56380089.34741411,
+                "7 Days Volume": 386554433.12551105,
+                "Project": "Synthetix",
+                "Rank": 4
+            },
+            "__typename": "get_result_template"
+        },
+        {
+            "data": {
+                "24 Hours Volume": 45701121.32689644,
+                "7 Days Volume": 331372003.2787907,
+                "Project": "Balancer",
+                "Rank": 5
+            },
+            "__typename": "get_result_template"
+        },
+        {
+            "data": {
+                "24 Hours Volume": 34307817.37747979,
+                "7 Days Volume": 267642063.7000394,
+                "Project": "Sushiswap",
+                "Rank": 6
+            },
+            "__typename": "get_result_template"
+        },
+        {
+            "data": {
+                "24 Hours Volume": 19914035.39160421,
+                "7 Days Volume": 209980686.26006594,
+                "Project": "0x Native",
+                "Rank": 7
+            },
+            "__typename": "get_result_template"
+        },
+        {
+            "data": {
+                "24 Hours Volume": 10720894.103536213,
+                "7 Days Volume": 117197319.6215566,
+                "Project": "1inch Limit Order Protocol",
+                "Rank": 8
+            },
+            "__typename": "get_result_template"
+        },
+        {
+            "data": {
+                "24 Hours Volume": 17183330.687651306,
+                "7 Days Volume": 102252743.46984842,
+                "Project": "Shibaswap",
+                "Rank": 9
+            },
+            "__typename": "get_result_template"
+        },
+        {
+            "data": {
+                "24 Hours Volume": 9067410.241356827,
+                "7 Days Volume": 101696113.21670969,
+                "Project": "hashflow",
+                "Rank": 10
+            },
+            "__typename": "get_result_template"
+        },
+        {
+            "data": {
+                "24 Hours Volume": 4215510.538053372,
+                "7 Days Volume": 33929022.73155201,
+                "Project": "airswap",
+                "Rank": 11
+            },
+            "__typename": "get_result_template"
+        },
+        {
+            "data": {
+                "24 Hours Volume": 92622.7192580699,
+                "7 Days Volume": 16386167.45658249,
+                "Project": "DFX Finance",
+                "Rank": 12
+            },
+            "__typename": "get_result_template"
+        },
+        {
+            "data": {
+                "24 Hours Volume": 2407051.410620478,
+                "7 Days Volume": 14625226.780636365,
+                "Project": "Bancor Network",
+                "Rank": 13
+            },
+            "__typename": "get_result_template"
+        },
+        {
+            "data": {
+                "24 Hours Volume": 522042.6189632945,
+                "7 Days Volume": 9248193.643783042,
+                "Project": "mStable",
+                "Rank": 14
+            },
+            "__typename": "get_result_template"
+        },
+        {
+            "data": {
+                "24 Hours Volume": 983305.6812596486,
+                "7 Days Volume": 7512039.126811941,
+                "Project": "Defi Swap",
+                "Rank": 15
+            },
+            "__typename": "get_result_template"
+        },
+        {
+            "data": {
+                "24 Hours Volume": 794918.2959036295,
+                "7 Days Volume": 7276197.21204455,
+                "Project": "Clipper",
+                "Rank": 16
+            },
+            "__typename": "get_result_template"
+        },
+        {
+            "data": {
+                "24 Hours Volume": 2929.572204754883,
+                "7 Days Volume": 4385902.273404081,
+                "Project": "LINKSWAP",
+                "Rank": 17
+            },
+            "__typename": "get_result_template"
+        },
+        {
+            "data": {
+                "24 Hours Volume": 423758.2185356587,
+                "7 Days Volume": 3652979.243570574,
+                "Project": "Saddle",
+                "Rank": 18
+            },
+            "__typename": "get_result_template"
+        },
+        {
+            "data": {
+                "24 Hours Volume": 521885.3657271437,
+                "7 Days Volume": 3601116.96917411,
+                "Project": "Kyber",
+                "Rank": 19
+            },
+            "__typename": "get_result_template"
+        },
+        {
+            "data": {
+                "24 Hours Volume": 106997.85631256328,
+                "7 Days Volume": 766558.2126150803,
+                "Project": "Smoothy Finance",
+                "Rank": 20
+            },
+            "__typename": "get_result_template"
+        },
+        {
+            "data": {
+                "24 Hours Volume": 101929.08826234096,
+                "7 Days Volume": 691620.6034961588,
+                "Project": "1inch LP",
+                "Rank": 21
+            },
+            "__typename": "get_result_template"
+        },
+        {
+            "data": {
+                "24 Hours Volume": 46163.3766803637,
+                "7 Days Volume": 616701.660772507,
+                "Project": "swapr",
+                "Rank": 22
+            },
+            "__typename": "get_result_template"
+        },
+        {
+            "data": {
+                "24 Hours Volume": 36232.09454880017,
+                "7 Days Volume": 365484.6887726185,
+                "Project": "Convergence",
+                "Rank": 23
+            },
+            "__typename": "get_result_template"
+        },
+        {
+            "data": {
+                "24 Hours Volume": 41505.096520367966,
+                "7 Days Volume": 339468.45643953496,
+                "Project": "DefiPlaza",
+                "Rank": 24
+            },
+            "__typename": "get_result_template"
+        },
+        {
+            "data": {
+                "24 Hours Volume": 8643.440782604906,
+                "7 Days Volume": 168753.62983439455,
+                "Project": "PowerIndex",
+                "Rank": 25
+            },
+            "__typename": "get_result_template"
+        },
+        {
+            "data": {
+                "24 Hours Volume": 7557.1463684320515,
+                "7 Days Volume": 134100.12089136886,
+                "Project": "Shell",
+                "Rank": 26
+            },
+            "__typename": "get_result_template"
+        },
+        {
+            "data": {
+                "24 Hours Volume": 6104.66871770458,
+                "7 Days Volume": 129815.42990360109,
+                "Project": "Indexed Finance",
+                "Rank": 27
+            },
+            "__typename": "get_result_template"
+        },
+        {
+            "data": {
+                "24 Hours Volume": 6867.609472589549,
+                "7 Days Volume": 81075.43334100457,
+                "Project": "LuaSwap",
+                "Rank": 28
+            },
+            "__typename": "get_result_template"
+        },
+        {
+            "data": {
+                "24 Hours Volume": 15479.126026354248,
+                "7 Days Volume": 47626.178188345766,
+                "Project": "Mooniswap",
+                "Rank": 29
+            },
+            "__typename": "get_result_template"
+        },
+        {
+            "data": {
+                "24 Hours Volume": 8803.636514784981,
+                "7 Days Volume": 22855.842685181644,
+                "Project": "Sakeswap",
+                "Rank": 30
+            },
+            "__typename": "get_result_template"
+        },
+        {
+            "data": {
+                "24 Hours Volume": null,
+                "7 Days Volume": 1780.20966903417,
+                "Project": "xSigma",
+                "Rank": 31
+            },
+            "__typename": "get_result_template"
+        },
+        {
+            "data": {
+                "24 Hours Volume": 216.047246555947,
+                "7 Days Volume": 1594.8190403612587,
+                "Project": "Unifi",
+                "Rank": 32
+            },
+            "__typename": "get_result_template"
+        }
+    ]

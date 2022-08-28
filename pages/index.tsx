@@ -2,8 +2,12 @@ import type { NextPage } from 'next'
 import Head from 'next/head'
 import Image from 'next/image'
 import styles from '../styles/Home.module.css'
+import {c1} from "../data/index"
+import codd from "../data/component1.json"
 
 const Home: NextPage = () => {
+
+  console.log("cdlnc",c1)
   return (
     <div className={styles.container}>
       <Head>
