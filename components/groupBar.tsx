@@ -7,19 +7,20 @@ import { scaleBand, scaleLinear, scaleOrdinal } from "@visx/scale";
 
 import { LegendOrdinal, LegendItem, LegendLabel } from "@visx/legend";
 import { Box, Card, CardContent, CardHeader } from "@mui/material";
+import ParentSize from "@visx/responsive/lib/components/ParentSize";
 
 interface InnerGraphData {
-  month: number,
-  usd_volume: number,
-  year: number
+  month: number;
+  usd_volume: number;
+  year: number;
 }
 
 export type BarGroupProps = {
-  gdata: [
-    data: InnerGraphData
-  ];
+  gdata: [data: InnerGraphData];
   margin?: { top: number; right: number; bottom: number; left: number };
   events?: boolean;
+  width?: number;
+  height?: number
 };
 
 const blue = "#aeeef8";
@@ -67,12 +68,14 @@ const preprocess = (gdata: any) => {
 
 export default function GroupBar({
   gdata,
+  width=500,
+  height=400,
   events = false,
   margin = defaultMargin,
 }: BarGroupProps) {
   // bounds
-  const width = 500;
-  const height = 400;
+  // const width = 500;
+  // const height = 400;
   const xMax = width - margin.left - margin.right;
   const yMax = height - margin.top - margin.bottom;
 
@@ -122,109 +125,125 @@ export default function GroupBar({
   tempScale.range([yMax, 0]);
 
   return width < 10 ? null : (
-    <Card style={{background: background}}>
+    <Card style={{ background: background }}>
       <CardContent>
         <Box>
-        <svg width={width} height={height}>
-        
-          <rect x={0} y={0} width={width} height={height} fill={background} />
-          <Group top={margin.top} left={margin.left}>
-            <BarGroup
-              data={preProcData}
-              keys={finalKey}
-              height={yMax}
-              x0={getDate}
-              x0Scale={dateScale}
-              x1Scale={cityScale}
-              yScale={tempScale}
-              color={colorScale}
-            >
-              {(barGroups) =>
-                barGroups.map((barGroup) => (
-                  <Group
-                    key={`bar-group-${barGroup.index}-${barGroup.x0}`}
-                    left={barGroup.x0}
-                  >
-                    {barGroup.bars.map((bar) => (
-                      <rect
-                        key={`bar-group-bar-${barGroup.index}-${bar.index}-${bar.value}-${bar.key}`}
-                        x={bar.x}
-                        y={bar.y}
-                        width={bar.width}
-                        height={bar.height}
-                        fill={bar.color}
-                        rx={0}
-                        onClick={() => {
-                          if (!events) return;
-                          const { key, value } = bar;
-                          alert(JSON.stringify({ key, value }));
-                        }}
-                      />
-                    ))}
-                  </Group>
-                ))
-              }
-            </BarGroup>
-          </Group>
-          <AxisBottom
-            top={yMax + margin.top}
-            left={margin.left}
-            scale={dateScale}
-            stroke={green}
-            tickStroke={green}
-            label="Month"
-            tickLabelProps={() => ({
-              fill: green,
-              fontSize: 11,
-              textAnchor: "middle",
-            })}
-          />
-          <AxisLeft
-            top={margin.top}
-            left={margin.left}
-            scale={tempScale}
-            stroke={green}
-            hideZero
-            hideTicks
-            hideAxisLine
-            label="Total USD DEX Volume"
-            tickFormat={(cost: any) => cost / Math.pow(10, 9) + "B"}
-          />
-          
-        </svg>
+            <svg width={width} height={height}>
+
+              <rect
+                x={0}
+                y={0}
+                width={width}
+                height={height}
+                fill={background}
+              />
+
+              <Group top={margin.top} left={margin.left}>
+                <BarGroup
+                  data={preProcData}
+                  keys={finalKey}
+                  height={yMax}
+                  x0={getDate}
+                  x0Scale={dateScale}
+                  x1Scale={cityScale}
+                  yScale={tempScale}
+                  color={colorScale}
+                >
+                  {(barGroups) =>
+                    barGroups.map((barGroup) => (
+                      <Group
+                        key={`bar-group-${barGroup.index}-${barGroup.x0}`}
+                        left={barGroup.x0}
+                      >
+                        {barGroup.bars.map((bar) => (
+                          <rect
+                            key={`bar-group-bar-${barGroup.index}-${bar.index}-${bar.value}-${bar.key}`}
+                            x={bar.x}
+                            y={bar.y}
+                            width={bar.width}
+                            height={bar.height}
+                            fill={bar.color}
+                            rx={0}
+                            onClick={() => {
+                              if (!events) return;
+                              const { key, value } = bar;
+                              alert(JSON.stringify({ key, value }));
+                            }}
+                          />
+                        ))}
+                      </Group>
+                    ))
+                  }
+                </BarGroup>
+              </Group>
+              <AxisBottom
+                top={yMax + margin.top}
+                left={margin.left}
+                scale={dateScale}
+                stroke={green}
+                tickStroke={green}
+                label="Month"
+                tickLabelProps={() => ({
+                  fill: green,
+                  fontSize: 11,
+                  textAnchor: "middle",
+                })}
+              />
+              <AxisLeft
+                top={margin.top}
+                left={margin.left}
+                scale={tempScale}
+                stroke={green}
+                hideZero
+                hideTicks
+                hideAxisLine
+                label="Total USD DEX Volume"
+                tickFormat={(cost: any) => cost / Math.pow(10, 9) + "B"}
+              />
+            </svg>
         </Box>
         <Box>
-        <LegendDemo title="Index">
-        <LegendOrdinal scale={colorScale}>
-          {(labels) => (
-            <div style={{ display: 'flex', flexDirection: 'row' }}>
-              {labels.map((label, i) => (
-                <LegendItem
-                  key={`legend-quantile-${i}`}
-                  margin="0 5px"
-                  onClick={() => {
-                    if (events) alert(`clicked: ${JSON.stringify(label)}`);
-                  }}
-                >
-                  <svg width={legendGlyphSize} height={legendGlyphSize}>
-                    <rect fill={label.value} width={legendGlyphSize} height={legendGlyphSize} />
-                  </svg>
-                  <LegendLabel align="left" margin="0 0 0 4px">
-                    {label.text}
-                  </LegendLabel>
-                </LegendItem>
-              ))}
-            </div>
-          )}
-        </LegendOrdinal>
-      </LegendDemo>
+          <LegendDemo title="Index">
+            <LegendOrdinal scale={colorScale}>
+              {(labels) => (
+                <div style={{ display: "flex", flexDirection: "row" }}>
+                  {labels.map((label, i) => (
+                    <LegendItem
+                      key={`legend-quantile-${i}`}
+                      margin="0 5px"
+                      onClick={() => {
+                        if (events) alert(`clicked: ${JSON.stringify(label)}`);
+                      }}
+                    >
+                      <svg width={legendGlyphSize} height={legendGlyphSize}>
+                        <rect
+                          fill={label.value}
+                          width={legendGlyphSize}
+                          height={legendGlyphSize}
+                        />
+                      </svg>
+                      <LegendLabel align="left" margin="0 0 0 4px">
+                        {label.text}
+                      </LegendLabel>
+                    </LegendItem>
+                  ))}
+                </div>
+              )}
+            </LegendOrdinal>
+          </LegendDemo>
         </Box>
       </CardContent>
     </Card>
   );
 }
 
-function LegendDemo({ title, children }: { title: string; children: React.ReactNode }) {
+function LegendDemo({
+  title,
+  children,
+}: {
+  title: string;
+  children: React.ReactNode;
+}) {
   return (
     <div className="legend">
       <div className="title">{title}</div>

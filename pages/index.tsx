@@ -7,6 +7,7 @@ import codd from "../data/component1.json";
 import Example from "../components/pieGraph";
 import axios from "axios"
 import GroupBar from "../components/groupBar";
+import ParentSize from "@visx/responsive/lib/components/ParentSize";
 
 const Home: NextPage = ({ pieData, groupBarData }) => {
   // console.log("cdlnc", c1);
@@ -23,8 +24,8 @@ const Home: NextPage = ({ pieData, groupBarData }) => {
           Welcome to <a href="https://nextjs.org">React.js!</a>
         </h1>
         <div>
-          {" "}
           <Example pieData={pieData.c2} />
+          {/* <ParentSize>{({ width, height }) => <GroupBar gdata={groupBarData.c3} width={width} height={height} />}</ParentSize> */}
           <GroupBar gdata={groupBarData.c3} />
         </div>
       </main>

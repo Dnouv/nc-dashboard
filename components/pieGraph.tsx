@@ -96,7 +96,7 @@ export default function Home({ pieData }: PieDataProps) {
             ) : (
               <>
                 <Text textAnchor="middle" fill="#aaa" fontSize={20} dy={20}>
-                  {`Hover to view`}
+                  {`Hover over donut to view`}
                 </Text>
               </>
             )}
