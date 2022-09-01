@@ -795,6 +795,20 @@
     "@typescript-eslint/types" "5.35.1"
     "eslint-visitor-keys" "^3.3.0"
 
+"@visx/axis@^2.12.2":
+  "integrity" "sha512-nE+DGNwRzXOmp6ZwMQ1yUhbF7uR2wd3j6Xja/kVgGA7wSbqUeCZzqKZvhRsCqyay6PtHVlRRAhHP31Ob39+jtw=="
+  "resolved" "https://registry.npmjs.org/@visx/axis/-/axis-2.12.2.tgz"
+  "version" "2.12.2"
+  dependencies:
+    "@types/react" "*"
+    "@visx/group" "2.10.0"
+    "@visx/point" "2.6.0"
+    "@visx/scale" "2.2.2"
+    "@visx/shape" "2.12.2"
+    "@visx/text" "2.12.2"
+    "classnames" "^2.3.1"
+    "prop-types" "^15.6.0"
+
 "@visx/curve@2.1.0":
   "integrity" "sha512-9b6JOnx91gmOQiSPhUOxdsvcnW88fgqfTPKoVgQxidMsD/I3wksixtwo8TR/vtEz2aHzzsEEhlv1qK7Y3yaSDw=="
   "resolved" "https://registry.npmjs.org/@visx/curve/-/curve-2.1.0.tgz"
@@ -839,6 +853,11 @@
     "@types/d3-random" "^2.2.0"
     "d3-random" "^2.2.2"
 
+"@visx/point@2.6.0":
+  "integrity" "sha512-amBi7yMz4S2VSchlPdliznN41TuES64506ySI22DeKQ+mc1s1+BudlpnY90sM1EIw4xnqbKmrghTTGfy6SVqvQ=="
+  "resolved" "https://registry.npmjs.org/@visx/point/-/point-2.6.0.tgz"
+  "version" "2.6.0"
+
 "@visx/scale@^2.2.2", "@visx/scale@2.2.2":
   "integrity" "sha512-3aDySGUTpe6VykDQmF+g2nz5paFu9iSPTcCOEgkcru0/v5tmGzUdvivy8CkYbr87HN73V/Jc53lGm+kJUQcLBw=="
   "resolved" "https://registry.npmjs.org/@visx/scale/-/scale-2.2.2.tgz"
@@ -851,7 +870,7 @@
     "d3-scale" "^3.3.0"
     "d3-time" "^2.1.1"
 
-"@visx/shape@^2.12.2":
+"@visx/shape@^2.12.2", "@visx/shape@2.12.2":
   "integrity" "sha512-4gN0fyHWYXiJ+Ck8VAazXX0i8TOnLJvOc5jZBnaJDVxgnSIfCjJn0+Nsy96l9Dy/bCMTh4DBYUBv9k+YICBUOA=="
   "resolved" "https://registry.npmjs.org/@visx/shape/-/shape-2.12.2.tgz"
   "version" "2.12.2"
@@ -869,7 +888,7 @@
     "lodash" "^4.17.21"
     "prop-types" "^15.5.10"
 
-"@visx/text@^2.12.2":
+"@visx/text@^2.12.2", "@visx/text@2.12.2":
   "integrity" "sha512-Sv9YEolggfv2Nf6+l28ESG3VXVR1+s4u/Cz17QpgOxygcbOM8LfLtriWtBsBMKdMbYKeUpoUro0clx55TUwzew=="
   "resolved" "https://registry.npmjs.org/@visx/text/-/text-2.12.2.tgz"
   "version" "2.12.2"
@@ -2355,7 +2374,7 @@
   "resolved" "https://registry.yarnpkg.com/prelude-ls/-/prelude-ls-1.2.1.tgz"
   "version" "1.2.1"
 
-"prop-types@^15.5.10", "prop-types@^15.5.7", "prop-types@^15.6.2", "prop-types@^15.7.2", "prop-types@^15.8.1":
+"prop-types@^15.5.10", "prop-types@^15.5.7", "prop-types@^15.6.0", "prop-types@^15.6.2", "prop-types@^15.7.2", "prop-types@^15.8.1":
   "integrity" "sha512-oj87CgZICdulUohogVAR7AjlC0327U4el4L6eAvOqCeudMDVU0NThNaV+b9Df4dXgSP1gXMTnPdhfe/2qDH5cg=="
   "resolved" "https://registry.yarnpkg.com/prop-types/-/prop-types-15.8.1.tgz"
   "version" "15.8.1"

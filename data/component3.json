@@ -1,382 +1,354 @@
-{
-    "query_results": [
-        {
-            "id": "1bb5cc3d-7692-4a63-a8ca-a4eb44c79161",
-            "job_id": "f6644471-fde2-4d91-8c50-f7ea2d78b5b1",
-            "runtime": 155,
-            "generated_at": "2022-08-16T07:00:16.180708+00:00",
-            "columns": [
-                "year",
-                "month",
-                "usd_volume"
-            ],
-            "__typename": "query_results"
-        }
-    ],
-    "query_errors": [
-        {
-            "id": "58438c8f-f72a-43ea-9790-d6537a73ccf8",
-            "job_id": "3874cff4-d030-4f64-bd88-2f328e59e409",
-            "runtime": 0,
-            "message": "Your query crashed. Try adding a LIMIT to your query.",
-            "metadata": null,
-            "type": "crashed",
-            "generated_at": "2022-08-16T10:40:04.783198+00:00",
-            "__typename": "query_errors"
-        }
-    ],
-    "get_result_by_result_id": [
-        {
-            "data": {
-                "month": 1,
-                "usd_volume": 39608410.97035212,
-                "year": 2019
-            },
-            "__typename": "get_result_template"
-        },
-        {
-            "data": {
-                "month": 2,
-                "usd_volume": 95203680.7891788,
-                "year": 2019
-            },
-            "__typename": "get_result_template"
-        },
-        {
-            "data": {
-                "month": 3,
-                "usd_volume": 120041217.20483796,
-                "year": 2019
-            },
-            "__typename": "get_result_template"
-        },
-        {
-            "data": {
-                "month": 4,
-                "usd_volume": 185238395.23671272,
-                "year": 2019
-            },
-            "__typename": "get_result_template"
-        },
-        {
-            "data": {
-                "month": 5,
-                "usd_volume": 256402858.01009917,
-                "year": 2019
-            },
-            "__typename": "get_result_template"
-        },
-        {
-            "data": {
-                "month": 6,
-                "usd_volume": 325870603.90486324,
-                "year": 2019
-            },
-            "__typename": "get_result_template"
-        },
-        {
-            "data": {
-                "month": 7,
-                "usd_volume": 355162850.9964292,
-                "year": 2019
-            },
-            "__typename": "get_result_template"
-        },
-        {
-            "data": {
-                "month": 8,
-                "usd_volume": 192573776.54445946,
-                "year": 2019
-            },
-            "__typename": "get_result_template"
-        },
-        {
-            "data": {
-                "month": 9,
-                "usd_volume": 298569615.10498464,
-                "year": 2019
-            },
-            "__typename": "get_result_template"
-        },
-        {
-            "data": {
-                "month": 10,
-                "usd_volume": 364002329.747203,
-                "year": 2019
-            },
-            "__typename": "get_result_template"
-        },
-        {
-            "data": {
-                "month": 11,
-                "usd_volume": 346419340.03635114,
-                "year": 2019
-            },
-            "__typename": "get_result_template"
-        },
-        {
-            "data": {
-                "month": 12,
-                "usd_volume": 513553123.2301625,
-                "year": 2019
-            },
-            "__typename": "get_result_template"
-        },
-        {
-            "data": {
-                "month": 1,
-                "usd_volume": 665410734.375147,
-                "year": 2020
-            },
-            "__typename": "get_result_template"
-        },
-        {
-            "data": {
-                "month": 2,
-                "usd_volume": 1040214831.3042018,
-                "year": 2020
-            },
-            "__typename": "get_result_template"
-        },
-        {
-            "data": {
-                "month": 3,
-                "usd_volume": 1123229546.8261552,
-                "year": 2020
-            },
-            "__typename": "get_result_template"
-        },
-        {
-            "data": {
-                "month": 4,
-                "usd_volume": 794639812.1740532,
-                "year": 2020
-            },
-            "__typename": "get_result_template"
-        },
-        {
-            "data": {
-                "month": 5,
-                "usd_volume": 1101746626.7157776,
-                "year": 2020
-            },
-            "__typename": "get_result_template"
-        },
-        {
-            "data": {
-                "month": 6,
-                "usd_volume": 1849863765.060481,
-                "year": 2020
-            },
-            "__typename": "get_result_template"
-        },
-        {
-            "data": {
-                "month": 7,
-                "usd_volume": 4820629233.106624,
-                "year": 2020
-            },
-            "__typename": "get_result_template"
-        },
-        {
-            "data": {
-                "month": 8,
-                "usd_volume": 12581972506.849966,
-                "year": 2020
-            },
-            "__typename": "get_result_template"
-        },
-        {
-            "data": {
-                "month": 9,
-                "usd_volume": 27385454623.273983,
-                "year": 2020
-            },
-            "__typename": "get_result_template"
-        },
-        {
-            "data": {
-                "month": 10,
-                "usd_volume": 18847403596.73795,
-                "year": 2020
-            },
-            "__typename": "get_result_template"
-        },
-        {
-            "data": {
-                "month": 11,
-                "usd_volume": 20191066942.164482,
-                "year": 2020
-            },
-            "__typename": "get_result_template"
-        },
-        {
-            "data": {
-                "month": 12,
-                "usd_volume": 28273520934.243652,
-                "year": 2020
-            },
-            "__typename": "get_result_template"
-        },
-        {
-            "data": {
-                "month": 1,
-                "usd_volume": 67643415120.02758,
-                "year": 2021
-            },
-            "__typename": "get_result_template"
-        },
-        {
-            "data": {
-                "month": 2,
-                "usd_volume": 78256590128.03261,
-                "year": 2021
-            },
-            "__typename": "get_result_template"
-        },
-        {
-            "data": {
-                "month": 3,
-                "usd_volume": 71307683319.24246,
-                "year": 2021
-            },
-            "__typename": "get_result_template"
-        },
-        {
-            "data": {
-                "month": 4,
-                "usd_volume": 84609930955.86838,
-                "year": 2021
-            },
-            "__typename": "get_result_template"
-        },
-        {
-            "data": {
-                "month": 5,
-                "usd_volume": 177633971419.0367,
-                "year": 2021
-            },
-            "__typename": "get_result_template"
-        },
-        {
-            "data": {
-                "month": 6,
-                "usd_volume": 88305140994.07413,
-                "year": 2021
-            },
-            "__typename": "get_result_template"
-        },
-        {
-            "data": {
-                "month": 7,
-                "usd_volume": 76965188468.70421,
-                "year": 2021
-            },
-            "__typename": "get_result_template"
-        },
-        {
-            "data": {
-                "month": 8,
-                "usd_volume": 102319896901.26909,
-                "year": 2021
-            },
-            "__typename": "get_result_template"
-        },
-        {
-            "data": {
-                "month": 9,
-                "usd_volume": 102337204865.9166,
-                "year": 2021
-            },
-            "__typename": "get_result_template"
-        },
-        {
-            "data": {
-                "month": 10,
-                "usd_volume": 128033590056.6322,
-                "year": 2021
-            },
-            "__typename": "get_result_template"
-        },
-        {
-            "data": {
-                "month": 11,
-                "usd_volume": 153064457390.98752,
-                "year": 2021
-            },
-            "__typename": "get_result_template"
-        },
-        {
-            "data": {
-                "month": 12,
-                "usd_volume": 153146336728.43832,
-                "year": 2021
-            },
-            "__typename": "get_result_template"
-        },
-        {
-            "data": {
-                "month": 1,
-                "usd_volume": 150337606166.1065,
-                "year": 2022
-            },
-            "__typename": "get_result_template"
-        },
-        {
-            "data": {
-                "month": 2,
-                "usd_volume": 95094893393.46036,
-                "year": 2022
-            },
-            "__typename": "get_result_template"
-        },
-        {
-            "data": {
-                "month": 3,
-                "usd_volume": 94901492845.16878,
-                "year": 2022
-            },
-            "__typename": "get_result_template"
-        },
-        {
-            "data": {
-                "month": 4,
-                "usd_volume": 92466584414.43939,
-                "year": 2022
-            },
-            "__typename": "get_result_template"
-        },
-        {
-            "data": {
-                "month": 5,
-                "usd_volume": 131762240556.94197,
-                "year": 2022
-            },
-            "__typename": "get_result_template"
-        },
-        {
-            "data": {
-                "month": 6,
-                "usd_volume": 95473377993.62221,
-                "year": 2022
-            },
-            "__typename": "get_result_template"
-        },
-        {
-            "data": {
-                "month": 7,
-                "usd_volume": 70263277769.41049,
-                "year": 2022
-            },
-            "__typename": "get_result_template"
-        },
-        {
-            "data": {
-                "month": 8,
-                "usd_volume": 32822279744.87001,
-                "year": 2022
-            },
-            "__typename": "get_result_template"
-        }
-    ]
-}
+[
+  {
+    "data": {
+      "month": 1,
+      "usd_volume": 39608410.97035212,
+      "year": 2019
+    },
+    "__typename": "get_result_template"
+  },
+  {
+    "data": {
+      "month": 2,
+      "usd_volume": 95203680.7891788,
+      "year": 2019
+    },
+    "__typename": "get_result_template"
+  },
+  {
+    "data": {
+      "month": 3,
+      "usd_volume": 120041217.20483796,
+      "year": 2019
+    },
+    "__typename": "get_result_template"
+  },
+  {
+    "data": {
+      "month": 4,
+      "usd_volume": 185238395.23671272,
+      "year": 2019
+    },
+    "__typename": "get_result_template"
+  },
+  {
+    "data": {
+      "month": 5,
+      "usd_volume": 256402858.01009917,
+      "year": 2019
+    },
+    "__typename": "get_result_template"
+  },
+  {
+    "data": {
+      "month": 6,
+      "usd_volume": 325870603.90486324,
+      "year": 2019
+    },
+    "__typename": "get_result_template"
+  },
+  {
+    "data": {
+      "month": 7,
+      "usd_volume": 355162850.9964292,
+      "year": 2019
+    },
+    "__typename": "get_result_template"
+  },
+  {
+    "data": {
+      "month": 8,
+      "usd_volume": 192573776.54445946,
+      "year": 2019
+    },
+    "__typename": "get_result_template"
+  },
+  {
+    "data": {
+      "month": 9,
+      "usd_volume": 298569615.10498464,
+      "year": 2019
+    },
+    "__typename": "get_result_template"
+  },
+  {
+    "data": {
+      "month": 10,
+      "usd_volume": 364002329.747203,
+      "year": 2019
+    },
+    "__typename": "get_result_template"
+  },
+  {
+    "data": {
+      "month": 11,
+      "usd_volume": 346419340.03635114,
+      "year": 2019
+    },
+    "__typename": "get_result_template"
+  },
+  {
+    "data": {
+      "month": 12,
+      "usd_volume": 513553123.2301625,
+      "year": 2019
+    },
+    "__typename": "get_result_template"
+  },
+  {
+    "data": {
+      "month": 1,
+      "usd_volume": 665410734.375147,
+      "year": 2020
+    },
+    "__typename": "get_result_template"
+  },
+  {
+    "data": {
+      "month": 2,
+      "usd_volume": 1040214831.3042018,
+      "year": 2020
+    },
+    "__typename": "get_result_template"
+  },
+  {
+    "data": {
+      "month": 3,
+      "usd_volume": 1123229546.8261552,
+      "year": 2020
+    },
+    "__typename": "get_result_template"
+  },
+  {
+    "data": {
+      "month": 4,
+      "usd_volume": 794639812.1740532,
+      "year": 2020
+    },
+    "__typename": "get_result_template"
+  },
+  {
+    "data": {
+      "month": 5,
+      "usd_volume": 1101746626.7157776,
+      "year": 2020
+    },
+    "__typename": "get_result_template"
+  },
+  {
+    "data": {
+      "month": 6,
+      "usd_volume": 1849863765.060481,
+      "year": 2020
+    },
+    "__typename": "get_result_template"
+  },
+  {
+    "data": {
+      "month": 7,
+      "usd_volume": 4820629233.106624,
+      "year": 2020
+    },
+    "__typename": "get_result_template"
+  },
+  {
+    "data": {
+      "month": 8,
+      "usd_volume": 12581972506.849966,
+      "year": 2020
+    },
+    "__typename": "get_result_template"
+  },
+  {
+    "data": {
+      "month": 9,
+      "usd_volume": 27385454623.273983,
+      "year": 2020
+    },
+    "__typename": "get_result_template"
+  },
+  {
+    "data": {
+      "month": 10,
+      "usd_volume": 18847403596.73795,
+      "year": 2020
+    },
+    "__typename": "get_result_template"
+  },
+  {
+    "data": {
+      "month": 11,
+      "usd_volume": 20191066942.164482,
+      "year": 2020
+    },
+    "__typename": "get_result_template"
+  },
+  {
+    "data": {
+      "month": 12,
+      "usd_volume": 28273520934.243652,
+      "year": 2020
+    },
+    "__typename": "get_result_template"
+  },
+  {
+    "data": {
+      "month": 1,
+      "usd_volume": 67643415120.02758,
+      "year": 2021
+    },
+    "__typename": "get_result_template"
+  },
+  {
+    "data": {
+      "month": 2,
+      "usd_volume": 78256590128.03261,
+      "year": 2021
+    },
+    "__typename": "get_result_template"
+  },
+  {
+    "data": {
+      "month": 3,
+      "usd_volume": 71307683319.24246,
+      "year": 2021
+    },
+    "__typename": "get_result_template"
+  },
+  {
+    "data": {
+      "month": 4,
+      "usd_volume": 84609930955.86838,
+      "year": 2021
+    },
+    "__typename": "get_result_template"
+  },
+  {
+    "data": {
+      "month": 5,
+      "usd_volume": 177633971419.0367,
+      "year": 2021
+    },
+    "__typename": "get_result_template"
+  },
+  {
+    "data": {
+      "month": 6,
+      "usd_volume": 88305140994.07413,
+      "year": 2021
+    },
+    "__typename": "get_result_template"
+  },
+  {
+    "data": {
+      "month": 7,
+      "usd_volume": 76965188468.70421,
+      "year": 2021
+    },
+    "__typename": "get_result_template"
+  },
+  {
+    "data": {
+      "month": 8,
+      "usd_volume": 102319896901.26909,
+      "year": 2021
+    },
+    "__typename": "get_result_template"
+  },
+  {
+    "data": {
+      "month": 9,
+      "usd_volume": 102337204865.9166,
+      "year": 2021
+    },
+    "__typename": "get_result_template"
+  },
+  {
+    "data": {
+      "month": 10,
+      "usd_volume": 128033590056.6322,
+      "year": 2021
+    },
+    "__typename": "get_result_template"
+  },
+  {
+    "data": {
+      "month": 11,
+      "usd_volume": 153064457390.98752,
+      "year": 2021
+    },
+    "__typename": "get_result_template"
+  },
+  {
+    "data": {
+      "month": 12,
+      "usd_volume": 153146336728.43832,
+      "year": 2021
+    },
+    "__typename": "get_result_template"
+  },
+  {
+    "data": {
+      "month": 1,
+      "usd_volume": 150337606166.1065,
+      "year": 2022
+    },
+    "__typename": "get_result_template"
+  },
+  {
+    "data": {
+      "month": 2,
+      "usd_volume": 95094893393.46036,
+      "year": 2022
+    },
+    "__typename": "get_result_template"
+  },
+  {
+    "data": {
+      "month": 3,
+      "usd_volume": 94901492845.16878,
+      "year": 2022
+    },
+    "__typename": "get_result_template"
+  },
+  {
+    "data": {
+      "month": 4,
+      "usd_volume": 92466584414.43939,
+      "year": 2022
+    },
+    "__typename": "get_result_template"
+  },
+  {
+    "data": {
+      "month": 5,
+      "usd_volume": 131762240556.94197,
+      "year": 2022
+    },
+    "__typename": "get_result_template"
+  },
+  {
+    "data": {
+      "month": 6,
+      "usd_volume": 95473377993.62221,
+      "year": 2022
+    },
+    "__typename": "get_result_template"
+  },
+  {
+    "data": {
+      "month": 7,
+      "usd_volume": 70263277769.41049,
+      "year": 2022
+    },
+    "__typename": "get_result_template"
+  },
+  {
+    "data": {
+      "month": 8,
+      "usd_volume": 32822279744.87001,
+      "year": 2022
+    },
+    "__typename": "get_result_template"
+  }
+]

@@ -1,4 +1,4 @@
-import type { NextPage } from "next";
+import type { NextPage, NextPageContext } from "next";
 import Head from "next/head";
 import Image from "next/image";
 import styles from "../styles/Home.module.css";
@@ -6,8 +6,9 @@ import { c1 } from "../data/index";
 import codd from "../data/component1.json";
 import Example from "../components/pieGraph";
 import axios from "axios"
+import GroupBar from "../components/groupBar";
 
-const Home: NextPage = ({ pieData }) => {
+const Home: NextPage = ({ pieData, groupBarData }) => {
   // console.log("cdlnc", c1);
   return (
     <div className={styles.container}>
@@ -24,6 +25,7 @@ const Home: NextPage = ({ pieData }) => {
         <div>
           {" "}
           <Example pieData={pieData.c2} />
+          <GroupBar gdata={groupBarData.c3} />
         </div>
       </main>
 
@@ -43,13 +45,17 @@ const Home: NextPage = ({ pieData }) => {
   );
 };
 
-export const getStaticProps = async (ctx) => {
-  const res = await axios.get("http://localhost:3000/api/c2");
-  const pieData = res.data;
+export const getStaticProps = async (ctx: NextPageContext) => {
+  const c2 = await axios.get("http://localhost:3000/api/c2");
+  const c3 = await axios.get("http://localhost:3000/api/c3");
+  const pieData = c2.data;
+
+  const groupBarData = c3.data;
+
 
   return {
     props: {
-      pieData
+      pieData, groupBarData
     }
   };
 };
