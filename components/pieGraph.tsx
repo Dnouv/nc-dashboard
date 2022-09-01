@@ -2,22 +2,7 @@ import { useState } from "react";
 import { Pie } from "@visx/shape";
 import { Group } from "@visx/group";
 import { Text } from "@visx/text";
-import {
-  Legend,
-  LegendLinear,
-  LegendQuantile,
-  LegendOrdinal,
-  LegendSize,
-  LegendThreshold,
-  LegendItem,
-  LegendLabel,
-} from "@visx/legend";
-import {
-  scaleLinear,
-  scaleOrdinal,
-  scaleThreshold,
-  scaleQuantile,
-} from "@visx/scale";
+
 import {
   Card,
   CardContent,
@@ -28,8 +13,36 @@ import {
 } from "@mui/material";
 import DataUsageIcon from "@mui/icons-material/DataUsage";
 
-export default function Home({ pieData }) {
-  const [active, setActive] = useState(null);
+export const background = "#717171";
+// 7 Days Volume: 8452673365.716572
+//     24 Hours Volume: 964728205.6398035
+//     Project: "Uniswap"
+//     Rank: 1
+interface InnerData {
+    data: {
+      "7 Days Volume": number,
+      "24 Hours Volume": number,
+      "Project": string,
+      "Rank": number
+      }
+}
+interface PieDataProps {
+  pieData: [
+    InnerData
+  ]
+}
+
+interface ArcType {
+    data: InnerData
+    endAngle: number
+    index: number
+    padAngle: number
+    startAngle: number
+    value: number
+}
+
+export default function Home({ pieData }: PieDataProps) {
+  const [active, setActive] = useState<any>(null);
   const width = 400;
   const half = width / 2;
 
@@ -40,7 +53,7 @@ export default function Home({ pieData }) {
     return `hsl(${stringUniqueHash % 360}, 95%, 35%)`;
   };
   return (
-    <Card>
+    <Card style={{background: background}}>
       <CardContent style={{ display: "flex" }}>
         <svg width={width} height={width}>
           <Group top={half} left={half}>
@@ -55,7 +68,7 @@ export default function Home({ pieData }) {
               padAngle={0.01}
             >
               {(pie) => {
-                return pie.arcs.map((arc) => {
+                return pie.arcs.map((arc:ArcType) => {
                   const color = stringToColour(arc.data.data.Project);
                   return (
                     <g
@@ -90,7 +103,7 @@ export default function Home({ pieData }) {
           </Group>
         </svg>
         <List dense style={{ overflow: "auto", maxHeight: "400px" }}>
-          {pieData.map((idat) => {
+          {pieData.map((idat:InnerData) => {
             return (
               <ListItem key={idat.data.Rank}>
                 <ListItemAvatar>
