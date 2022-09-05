@@ -7,9 +7,8 @@ import codd from "../data/component1.json";
 import Example from "../components/pieGraph";
 import axios from "axios"
 import GroupBar from "../components/groupBar";
-import ParentSize from "@visx/responsive/lib/components/ParentSize";
 
-const Home: NextPage = ({ pieData, groupBarData }) => {
+const Home: NextPage = ({ pieData, groupBarData }:any) => {
   // console.log("cdlnc", c1);
   return (
     <div className={styles.container}>

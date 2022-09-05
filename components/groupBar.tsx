@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect, useRef, useState } from "react";
 import { Group } from "@visx/group";
 import { BarGroup } from "@visx/shape";
 import { AxisBottom, AxisLeft } from "@visx/axis";
@@ -8,6 +8,7 @@ import { scaleBand, scaleLinear, scaleOrdinal } from "@visx/scale";
 import { LegendOrdinal, LegendItem, LegendLabel } from "@visx/legend";
 import { Box, Card, CardContent, CardHeader } from "@mui/material";
 import ParentSize from "@visx/responsive/lib/components/ParentSize";
+import { ScaleSVG } from "@visx/responsive";
 
 interface InnerGraphData {
   month: number;
@@ -74,10 +75,34 @@ export default function GroupBar({
   margin = defaultMargin,
 }: BarGroupProps) {
   // bounds
-  // const width = 500;
-  // const height = 400;
   const xMax = width - margin.left - margin.right;
   const yMax = height - margin.top - margin.bottom;
+  const [size, setSize] = useState({width: 400, height:400})
+  const card_ele = useRef<any | HTMLDivElement>()
+
+  useEffect(() => {
+    
+    const element:any = card_ele.current;
+        element.addEventListener('resize', (event:any) => setSize(event.detail));
+
+        function checkResize(mutations:any) {
+            const el = mutations[0].target;
+            const w = el.clientWidth;
+            const h = el.clientHeight;
+
+            const isChange = mutations
+                .map((m:any) => `${m.oldValue}`)
+                .some((prev:any) => prev.indexOf(`width: ${w}px`) === -1 || prev.indexOf(`height: ${h}px`) === -1);
+
+            if (!isChange) { return; }
+            const event = new CustomEvent('resize', { detail: { width: w, height: h } });
+            el.dispatchEvent(event);
+        }
+        const observer = new MutationObserver(checkResize);
+        observer.observe(element, { attributes: true, attributeOldValue: true, attributeFilter: ['style'] });
+
+
+  })
 
   /////////// testing shift
   const { preProcData, tempYear } = preprocess(gdata);
@@ -97,7 +122,7 @@ export default function GroupBar({
     domain: preProcData.map(getDate),
     padding: 0.1,
   });
-  const cityScale = scaleBand<string>({
+  const yrScale = scaleBand<string>({
     domain: finalKey,
     padding: 0.1,
   });
@@ -121,20 +146,20 @@ export default function GroupBar({
 
   // update scale output dimensions
   dateScale.rangeRound([0, xMax]);
-  cityScale.rangeRound([0, dateScale.bandwidth()]);
+  yrScale.rangeRound([0, dateScale.bandwidth()]);
   tempScale.range([yMax, 0]);
 
   return width < 10 ? null : (
-    <Card style={{ background: background }}>
+    <Card ref={card_ele} style={{ background: background }} id="bar_graph">
       <CardContent>
         <Box>
-            <svg width={width} height={height}>
-
+        <ScaleSVG width={size.width*2} height={size.height-10}>
+            <svg width={size.width*2} height={size.height*2}>
               <rect
                 x={0}
                 y={0}
-                width={width}
-                height={height}
+                width={size.width}
+                height={size.height}
                 fill={background}
               />
 
@@ -145,7 +170,7 @@ export default function GroupBar({
                   height={yMax}
                   x0={getDate}
                   x0Scale={dateScale}
-                  x1Scale={cityScale}
+                  x1Scale={yrScale}
                   yScale={tempScale}
                   color={colorScale}
                 >
@@ -201,6 +226,8 @@ export default function GroupBar({
                 tickFormat={(cost: any) => cost / Math.pow(10, 9) + "B"}
               />
             </svg>
+            </ScaleSVG>
+
         </Box>
         <Box>
           <LegendDemo title="Index">

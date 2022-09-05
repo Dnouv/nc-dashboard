@@ -12,6 +12,7 @@ import {
   ListItemText,
 } from "@mui/material";
 import DataUsageIcon from "@mui/icons-material/DataUsage";
+import { ParentSize, ScaleSVG } from "@visx/responsive";
 
 export const background = "#717171";
 // 7 Days Volume: 8452673365.716572
@@ -52,9 +53,12 @@ export default function Home({ pieData }: PieDataProps) {
     }, 0);
     return `hsl(${stringUniqueHash % 360}, 95%, 35%)`;
   };
+  
   return (
     <Card style={{background: background}}>
       <CardContent style={{ display: "flex" }}>
+      <ScaleSVG width={400} height={500}>
+            
         <svg width={width} height={width}>
           <Group top={half} left={half}>
             <Pie
@@ -102,6 +106,7 @@ export default function Home({ pieData }: PieDataProps) {
             )}
           </Group>
         </svg>
+        </ScaleSVG>
         <List dense style={{ overflow: "auto", maxHeight: "400px" }}>
           {pieData.map((idat:InnerData) => {
             return (
