@@ -2,14 +2,13 @@ import type { NextPage, NextPageContext } from "next";
 import Head from "next/head";
 import Image from "next/image";
 import styles from "../styles/Home.module.css";
-import { c1 } from "../data/index";
-import codd from "../data/component1.json";
+
 import Example from "../components/pieGraph";
 import axios from "axios"
 import GroupBar from "../components/groupBar";
+import EditablePara from "../components/Editable";
 
 const Home: NextPage = ({ pieData, groupBarData }:any) => {
-  // console.log("cdlnc", c1);
   return (
     <div className={styles.container}>
       <Head>
@@ -26,6 +25,7 @@ const Home: NextPage = ({ pieData, groupBarData }:any) => {
           <Example pieData={pieData.c2} />
           {/* <ParentSize>{({ width, height }) => <GroupBar gdata={groupBarData.c3} width={width} height={height} />}</ParentSize> */}
           <GroupBar gdata={groupBarData.c3} />
+          <EditablePara />
         </div>
       </main>
 
